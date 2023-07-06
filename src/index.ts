@@ -11,6 +11,7 @@ const typeDefs = `#graphql
 
   type Query {
     projects: [Project]
+    getProject(slug: String): Project
   }
 `
 
@@ -74,6 +75,7 @@ const projects = [
 const resolvers = {
   Query: {
     projects: () => projects,
+    getProject: (_, args) => projects.find((project) => project.slug === args.slug)
   },
 };
 
