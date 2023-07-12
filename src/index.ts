@@ -8,6 +8,7 @@ const typeDefs = `#graphql
     title: String!
     excerpt: String
     url: String
+    image: String
   }
 
   type Query {
@@ -85,7 +86,8 @@ const projects = [
     slug: 'culvers',
     title: 'Culver\'s',
     excerpt: 'From new components to full Branded Content.',
-    url: 'https://www.culvers.com/'
+    url: 'https://www.culvers.com/',
+    image: 'culvers.jpg'
   },
   {
     id: 10,
@@ -93,6 +95,7 @@ const projects = [
     title: 'Schneider Jobs',
     excerpt: 'Built from the ground up on NextJS and GraphQL.',
     url: 'https://schneiderjobs.com/',
+    image: 'schneiderjobs.jpg'
   },
   {
     id: 11,
@@ -100,6 +103,7 @@ const projects = [
     title: 'Hiebing',
     excerpt: 'The Hiebing.com site built on NextJS with WPEngine Atlas.',
     url: 'https://www.hiebing.com/',
+    image: 'hiebing.png'
   }
 ]
 
