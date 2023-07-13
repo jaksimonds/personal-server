@@ -1,4 +1,17 @@
-export const typeDefs = `#graphql
+import { ApolloServer } from "@apollo/server";
+import { expressMiddleware } from '@apollo/server/express4'
+import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer'
+import express from 'express'
+import http from 'http'
+import cors from 'cors'
+import bodyParser from "body-parser";
+import { VercelRequest, VercelResponse } from "@vercel/node";
+
+interface ServerContext {
+  token?: String
+}
+
+const typeDefs = `#graphql
   type Project {
     id: Int!
     slug: String!
@@ -104,7 +117,7 @@ const projects = [
   }
 ]
 
-export const resolvers = {
+const resolvers = {
   Query: {
     projects: () => projects,
     featuredProjects: () => projects.filter(project => project.id > projects.length - 4)
@@ -112,3 +125,34 @@ export const resolvers = {
     project: (_, args) => projects.find((project) => project.slug === args.slug)
   },
 };
+
+const server = async (request: VercelRequest, response: VercelResponse) => {
+  const app = express()
+
+  const httpServer = http.createServer(app)
+
+  const server = new ApolloServer<ServerContext>({
+    typeDefs,
+    resolvers,
+    plugins: [ApolloServerPluginDrainHttpServer({httpServer})],
+  })
+
+  await server.start()
+
+  app.use(
+    '/',
+    cors<cors.CorsRequest>(),
+    bodyParser.json({
+      limit: '50mb'
+    }),
+    expressMiddleware(server, {
+      context: async ({req}) => ({ token: req.headers.token })
+    })
+  )
+
+  await new Promise<void>((resolve) => httpServer.listen({ port: 4000 }, resolve))
+
+  console.log(`Server ready`);
+}
+
+export default server
