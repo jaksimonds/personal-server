@@ -8,6 +8,7 @@ const typeDefs = gql`
     excerpt: String
     url: String
     image: String
+    year: Int!
   }
 
   type Query {
