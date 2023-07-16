@@ -1,14 +1,20 @@
 import { gql } from 'graphql-tag'
 
 const typeDefs = gql`
+  type Hero {
+    image: String
+    intro: String
+  }
+
   type Project {
     id: Int!
     slug: String!
     title: String!
     excerpt: String
     url: String
-    image: String
+    thumbnail: String
     year: Int!
+    hero: Hero
   }
 
   type Query {
