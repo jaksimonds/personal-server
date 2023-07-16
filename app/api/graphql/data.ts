@@ -1,4 +1,62 @@
-const projects = [
+export const tech = [
+  {
+    id: 0,
+    name: 'next',
+    label: 'NextJS',
+    content: 'Front-end React web framework. This site utilizes the App router for navigation.',
+    cta: {
+      text: 'Learn about NextJS',
+      href: 'https://nextjs.org/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 1,
+    name: 'typescript',
+    label: 'TypeScript',
+    content: 'Strongly typed language that builds ontop of JavaScript.',
+    cta: {
+      text: 'Learn about TypeScript',
+      href: 'https://www.typescriptlang.org/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 2,
+    name: 'graphql',
+    label: 'GraphQL',
+    content: 'Query language for handling and resolving a variety of network requests.',
+    cta: {
+      text: 'Learn about GraphQL',
+      href: 'https://graphql.org/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 3,
+    name: 'vercel',
+    label: 'Vercel',
+    content: 'Frontend cloud infrastructure.',
+    cta: {
+      text: 'Learn about Vercel',
+      href: 'https://vercel.com',
+      target: '_blank'
+    }
+  },
+  {
+    id: 4,
+    name: 'github',
+    label: 'GitHub',
+    content: 'Cloud-based code repository service.',
+    cta: {
+      text: 'Learn about GitHub',
+      href: 'https://github.com/',
+      target: '_blank'
+    }
+  }
+]
+
+export const projects = [
   {
     id: 0,
     slug: 'mmoca-redesign',
@@ -155,4 +213,9 @@ const projects = [
   }
 ]
 
-export default projects
+export const pages = [
+  {
+    slug: 'home',
+    tech: tech.filter(item => ['next', 'typescript', 'graphql', 'vercel', 'github'].includes(item.name))
+  }
+]

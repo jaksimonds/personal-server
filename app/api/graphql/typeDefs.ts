@@ -6,6 +6,12 @@ const typeDefs = gql`
     intro: String
   }
 
+  type Link {
+    text: String
+    href: String!
+    target: String
+  }
+
   type Project {
     id: Int!
     slug: String!
@@ -17,10 +23,23 @@ const typeDefs = gql`
     hero: Hero
   }
 
+  type Tech {
+    id: Int!
+    name: String!,
+    label: String!,
+    content: String,
+    cta: Link
+  }
+
+  type Page {
+    tech: [Tech]
+  }
+
   type Query {
     projects: [Project]
     featuredProjects: [Project]
     project(slug: String): Project
+    page(slug: String): Page
   }
 `
 
