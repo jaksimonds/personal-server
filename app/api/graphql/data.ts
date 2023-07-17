@@ -53,6 +53,171 @@ export const tech = [
       href: 'https://github.com/',
       target: '_blank'
     }
+  },
+  {
+    id: 5,
+    name: 'dotnet',
+    label: '.Net',
+    content: 'Open source framework built by Microsoft.',
+    cta: {
+      text: 'Learn about .Net',
+      href: 'https://dotnet.microsoft.com/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 6,
+    name: 'agilitycms',
+    label: 'AgilityCMS',
+    content: 'API first headless CMS platform.',
+    cta: {
+      text: 'Learn about AgilityCMS',
+      href: 'https://agilitycms.com/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 7,
+    name: 'react',
+    label: 'React',
+    content: 'JavaScript framework built by Meta.',
+    cta: {
+      text: 'Learn about React',
+      href: 'https://react.dev/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 8,
+    name: 'faust',
+    label: 'Faust.js',
+    content: 'Front-end JavaScript framework built to work alongside headless WordPress solutions.',
+    cta: {
+      text: 'Learn about Faust.js',
+      href: 'https://faustjs.org/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 9,
+    name: 'wpengine',
+    label: 'WP Engine',
+    content: 'WordPress hosting provider with a suite of product offerings.',
+    cta: {
+      text: 'Learn about WP Engine',
+      href: 'https://wpengine.com/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 10,
+    name: 'contentstack',
+    label: 'Contentstack',
+    content: 'Headless CMS platform.',
+    cta: {
+      text: 'Learn about Contentstack',
+      href: 'https://www.contentstack.com/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 11,
+    name: 'scss',
+    label: 'Sass',
+    content: 'CSS Preprocessor that allows for more reusable and maintainable styles.',
+    cta: {
+      text: 'Learn about Sass',
+      href: 'https://sass-lang.com/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 12,
+    name: 'wordpress',
+    label: 'WordPress',
+    content: 'Open source personal publishing system built on PHP and MySQL.',
+    cta: {
+      text: 'Learn about WordPress',
+      href: 'https://wordpress.org/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 13,
+    name: 'gitlab',
+    label: 'GitLab',
+    content: 'Git-centric DevOps platform.',
+    cta: {
+      text: 'Learn about GitLab',
+      href: 'https://about.gitlab.com/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 13,
+    name: 'pantheon',
+    label: 'Pantheon',
+    content: 'WebOps platform with a focus on WordPress and Drupal hosting.',
+    cta: {
+      text: 'Learn about Pantheon',
+      href: 'https://pantheon.io/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 14,
+    name: 'armor',
+    label: 'Armor',
+    content: 'Security first cloud-based hosting solutions.',
+    cta: {
+      text: 'Learn about Armor',
+      href: 'https://www.armor.com/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 15,
+    name: 'drupal',
+    label: 'Drupal',
+    content: 'Security first cloud-based hosting solutions.',
+    cta: {
+      text: 'Learn about Drupal',
+      href: 'https://www.armor.com/',
+      target: '_blank'
+    }
+  },
+  {
+    id: 16,
+    name: 'bitbucket',
+    label: 'Bitbucket',
+    content: 'Atlassian\'s DevOps solution.',
+    cta: {
+      text: 'Learn about Bitbucket',
+      href: 'https://bitbucket.org/product',
+      target: '_blank'
+    }
+  },
+  {
+    id: 17,
+    name: 'azuredevops',
+    label: 'Azure DevOps',
+    content: 'Microsoft\'s cloud-based DevOps solution.',
+    cta: {
+      text: 'Learn about Azure DevOps',
+      href: 'https://azure.microsoft.com/en-us/products/devops',
+      target: '_blank'
+    }
+  },
+  {
+    id: 18,
+    name: 'docker',
+    label: 'Docker',
+    content: 'Containerized development system to ease complexity of development.',
+    cta: {
+      text: 'Learn about Docker',
+      href: 'https://www.docker.com/',
+      target: '_blank'
+    }
   }
 ]
 
@@ -66,7 +231,8 @@ export const projects = [
     year: 2018,
     hero: {
       intro: 'The Madison Museum of Contemporary Art is an art gallery located in downtown Madison Wisconsin. Their website acts as a digital event calendar as well as a location for users to browse the various artists and galleries on display.'
-    }
+    },
+    tech: tech.filter(item => ['wordpress', 'scss', 'pantheon'].includes(item.name))
   },
   {
     id: 1,
@@ -79,7 +245,8 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/karavan-hero.png`,
       intro: 'Karavan Trailers is a trailer manufacturer that supplies utility, marine, and industrial trailers. The website acts as a product catalog for their collection of trailers and provides information about the variety of types.'
-    }
+    },
+    tech: tech.filter(item => ['wordpress', 'scss', 'wpengine'].includes(item.name))
   },
   {
     id: 2,
@@ -92,7 +259,8 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/abcsupply-hero.png`,
       intro: 'ABC Supply is a nation-wide provider of exterior and interior building products. Their careers site offers a wide-range of driving and corporate positions across the country.'
-    }
+    },
+    tech: tech.filter(item => ['wordpress', 'scss', 'wpengine', 'gitlab'].includes(item.name))
   },
   {
     id: 3,
@@ -105,7 +273,8 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/abclocator-hero.png`,
       intro: 'Due to the similar nature of the ABC Supply and LW Supply careers search we built a custom NPM package for use on both sites. This custom package allows for ease of maintenance as the code is shared while also providing different styles and datasets for the two sites.'
-    }
+    },
+    tech: tech.filter(item => ['wordpress', 'scss', 'wpengine', 'gitlab'].includes(item.name))
   },
   {
     id: 4,
@@ -118,7 +287,8 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/acis-hero.png`,
       intro: 'American Classic Vinyl Siding is a supplier and manufacturer of siding and windows. This site acts as a product catalog for users to browse and gather information before contacting for a purchase.'
-    }
+    },
+    tech: tech.filter(item => ['wordpress', 'scss', 'wpengine', 'gitlab'].includes(item.name))
   },
   {
     id: 5,
@@ -131,7 +301,8 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/hiusa-hero.png`,
       intro: 'Hostelling International\'s U.S. branch where users can search and browse a variety of hostels. The site also acts as a travel planning hub by informing users of things to do around the area they are researching and blog posts to give them more information.'
-    }
+    },
+    tech: tech.filter(item => ['wordpress', 'scss', 'react', 'docker', 'azuredevops'].includes(item.name))
   },
   {
     id: 6,
@@ -144,7 +315,8 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/qti-hero.png`,
       intro: 'The QTI Group is a job recruiter and HR consultation firm based out of Wisconsin. Their website acts as a job board for both people looking for a job and for companies looking to post open positions.'
-    }
+    },
+    tech: tech.filter(item => ['dotnet', 'agilitycms', 'scss', 'gitlab'].includes(item.name))
   },
   {
     id: 7,
@@ -157,7 +329,8 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/summit-hero.png`,
       intro: 'Summit Credit Union is one of the largest credit unions in the state of Wisconsin. Their site serves as an online banking portal for members as well as an information hub for users at any point in their financial journey.'
-    }
+    },
+    tech: tech.filter(item => ['drupal', 'armor', 'scss', 'bitbucket'].includes(item.name))
   },
   {
     id: 8,
@@ -170,7 +343,8 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/wainroy-hero.png`,
       intro: 'Wain-Roy produces construction equipment attachments for a wide range of functions. Users can search for a specific product using the custom WooCommerce search or find a nearby dealer using the custom dealer locator plugin.'
-    }
+    },
+    tech: tech.filter(item => ['wordpress', 'scss', 'wpengine', 'gitlab'].includes(item.name))
   },
   {
     id: 9,
@@ -183,7 +357,8 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/culvers-hero.png`,
       intro: 'Culver\'s is nation-wide restaurant franchise based out of Sauk City Wisconsin. Their website provides users information about their various locations, menu items, and other informative content.'
-    }
+    },
+    tech: tech.filter(item => ['dotnet', 'agilitycms', 'react', 'scss', 'github'].includes(item.name))
   },
   {
     id: 10,
@@ -196,7 +371,8 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/schhneiderjobs-hero.png`,
       intro: 'Schneider is an enterprise level trucking company that supports a variety of digital properties. Schneider Jobs is their primary careers site with an emphasis on driver and corporate positions across the country.'
-    }
+    },
+    tech: tech.filter(item => ['next', 'graphql', 'scss', 'contentstack', 'github'].includes(item.name))
   },
   {
     id: 11,
@@ -209,13 +385,14 @@ export const projects = [
     hero: {
       image: `${process.env.NEXT_PUBLIC_APOLLO_URL}/assets/hiebing-hero.png`,
       intro: 'Hiebing is an advertising agency based out of Madison Wisconsin.'
-    }
+    },
+    tech: tech.filter(item => ['next', 'faust', 'scss', 'wpengine', 'github'].includes(item.name))
   }
 ]
 
 export const pages = [
   {
     slug: 'home',
-    tech: tech.filter(item => ['next', 'typescript', 'graphql', 'vercel', 'github'].includes(item.name))
+    tech: tech.filter(item => ['next', 'typescript', 'graphql', 'scss', 'vercel', 'github'].includes(item.name))
   }
 ]

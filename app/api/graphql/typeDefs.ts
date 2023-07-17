@@ -21,6 +21,7 @@ const typeDefs = gql`
     thumbnail: String
     year: Int!
     hero: Hero
+    tech: [Tech]
   }
 
   type Tech {
