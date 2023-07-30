@@ -1,5 +1,7 @@
 import { inter } from './fonts'
+import { Footer } from '@jsimonds/component-library'
 
+import '@jsimonds/component-library/lib/index.css'
 import './styles/site.scss'
 
 interface IRootLayout {
@@ -12,6 +14,7 @@ const RootLayout = ({ children }: IRootLayout) => (
       <main>
         {children}
       </main>
+      <Footer />
     </body>
   </html>
 )
