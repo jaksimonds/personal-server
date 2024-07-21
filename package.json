@@ -15,7 +15,7 @@
 	"dependencies": {
 		"@apollo/server": "^4.10.4",
 		"@as-integrations/next": "^3.0.0",
-		"@jsimonds/component-library": "^1.0.1",
+		"@jsimonds/component-library": "^1.1.0",
 		"graphql-tag": "^2.12.6",
 		"next": "^14.2.5",
 		"react": "^18.3.1",
